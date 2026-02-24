@@ -3,3 +3,94 @@ body {
     margin: 0;
     padding: 0;
 }
+
+header, .icon {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    height: 8vh;
+    justify-content: space-between;
+    padding: 0 1em;
+    border: 1px solid blue;
+}
+
+.icon {
+    gap: 0.15em;
+}
+
+header img {
+    width: 32px;
+    height: 32px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+header a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header a:link, 
+header a:visited {
+    color: black;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+.featured {
+    height: 30vh;
+    background-size: cover;
+    background-image: url('../images/article.png');
+    background-color: blue;
+    color: #FFFFFF;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border: 1px solid yellow;
+}
+
+.featured .date, 
+.recent .date {
+    text-transform: uppercase;
+}
+
+.featured .date,
+.featured h1, 
+.featured p,
+.recent .date,
+.recent h1,
+.recent p {
+    margin-top: 0;
+}
+
+.recent {
+    height: 53vh;
+
+    border: 1px solid green;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.post img {
+    margin-bottom: 1em;
+}
+
+footer {
+    height: 8vh;
+
+    border: 1px solid red;
+}
