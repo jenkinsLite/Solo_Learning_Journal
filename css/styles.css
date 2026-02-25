@@ -12,8 +12,11 @@ header, .icon {
 header {
     height: 8vh;
     justify-content: space-between;
-    padding: 0 1em;
     /* border: 1px solid blue; */
+}
+
+header, .featured, .main, .main-content {
+    padding: 0 1em;
 }
 
 header, .recent {
@@ -48,26 +51,49 @@ nav {
     font-size: 0.6em;
     font-weight: 700;
     display: flex;
-    gap: 3em;
+    gap: 2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.featured, .main-content, .post, footer {
+    display: flex;
+    flex-direction: column;
 }
 
 .featured {
-    height: 30vh;
+    min-height: 30vh;
     background-size: cover;
-    background-image: url('../images/article.png');
-    color: #FFFFFF;
-    padding: 0 1em;
     justify-content: flex-end;
 
     /* border: 1px solid yellow; */
 }
 
-.featured, .recent, footer {
-    display: flex;
-    flex-direction: column;
+.featured {
+    color: #FFFFFF;
+    background-image: url('../images/article.png');
+}
+
+.main {
+    color: #151515;
+    background-color: #FFFFFF;
+    margin-top: 2em;
+}
+
+.main-content h1 {
+    font-size: 1.1em;
+}
+
+.main-content img {
+    border-radius: 0.3em;
+    margin: 1em 0;
 }
 
 .featured .date, 
+.main .date,
 .recent .date {
     text-transform: uppercase;
 }
@@ -75,22 +101,55 @@ nav {
 .featured .date,
 .featured h1, 
 .featured p,
+.main .date,
+.main h1, 
+.main p,
 .recent .date,
 .recent h1,
 .recent p {
     margin-top: 0;
 }
 
+.profile {
+    min-height: 30vh;
+    padding: 2em 0 0 2em;
+    box-sizing: border-box;
+}
+
+.profile img {
+    height: 200px;
+}
+
+.main-content .intro {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main-content .detail {
+    margin-bottom: 2em;
+}
+
+.recent-title {
+    font-size: 1.1em;
+    text-align: center;
+    padding-top: 2em;
+}
+
 .recent {
     min-height: 53vh;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
     /* border: 1px solid green; */
 }
 
 .post {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .post img {
@@ -120,4 +179,86 @@ footer p {
     color: #D7D7D7;
     margin-top: 0.25em;
     margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        font-size: 1em;
+    }
+
+    .featured {
+        min-height: 45vh;
+    }
+
+    .featured h1, 
+    .featured p {
+        max-width: 70%;
+    }
+
+    .featured {
+        padding: 0 0 2.5em 2.5em;
+    }
+
+    .profile {
+        display: flex;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        padding: 0 2em;
+    }
+
+    .recent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recent-title {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 900px) {
+    .featured h1, 
+    .featured p {
+        max-width: 650px;
+    }
+
+    .recent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-content img {
+        display: block;
+        height: auto;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main,
+    .container {
+        height: auto;
+        width: 900px;
+    }
+
+    .main {
+        margin: 3em auto 2.5em;
+    }
+
+    .container {
+        margin: 2em auto 0; 
+    }
+
+}
+
+@media (min-width: 1199px) {
+    header, .featured, .profile {
+        width: 1200px;
+        margin: 0 auto;
+    }
 }
