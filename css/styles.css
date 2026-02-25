@@ -13,7 +13,11 @@ header {
     height: 8vh;
     justify-content: space-between;
     padding: 0 1em;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+}
+
+header, .recent {
+    color: #0E0E0E;
 }
 
 .icon {
@@ -21,13 +25,13 @@ header {
 }
 
 header img {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1em;
 }
 
 header a {
@@ -41,22 +45,26 @@ header a:visited {
 }
 
 nav {
+    font-size: 0.6em;
+    font-weight: 700;
     display: flex;
-    gap: 1em;
+    gap: 3em;
 }
 
 .featured {
     height: 30vh;
     background-size: cover;
     background-image: url('../images/article.png');
-    background-color: blue;
     color: #FFFFFF;
     padding: 0 1em;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
 
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+}
+
+.featured, .recent, footer {
+    display: flex;
+    flex-direction: column;
 }
 
 .featured .date, 
@@ -74,9 +82,9 @@ nav {
 }
 
 .recent {
-    height: 53vh;
+    min-height: 53vh;
 
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .post {
@@ -89,8 +97,27 @@ nav {
     margin-bottom: 1em;
 }
 
-footer {
-    height: 8vh;
+.featured, footer {
+    background-color: #202020;
+}
 
-    border: 1px solid red;
+footer {
+    min-height: 8vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+footer h3{
+    font-size: 0.8em;
+    color: #ECECEC;
+    margin: 0;
+}
+
+footer p {
+    font-size: 0.6em;
+    color: #D7D7D7;
+    margin-top: 0.25em;
+    margin-bottom: 0;
 }
